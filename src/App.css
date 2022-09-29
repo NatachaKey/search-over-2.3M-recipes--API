@@ -46,9 +46,10 @@ video {
 }
 
 .foto{
-  width:350px;
-  height:350px;
+  width:400px;
+  height:400px;
   border: #fff double 15px;
+  border-radius: 50%;
 }
 
 ul {
