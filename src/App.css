@@ -24,17 +24,18 @@ video {
 }
 
 .search {
-  width: 100%;
+  width: 50%;
   padding: 12px 24px;
   background-color: transparent;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 18px;
-  color: #575756;
+  color: #212121;
   background-color: transparent;
   margin-left: 0px;
-  box-shadow: inset 0px 0px 0px 4px #ddd6e8;
+  box-shadow: inset 0px 0px 0px 3px #343837;
   border-radius: 10px;
-  font-family: 'Fredoka One', cursive;
+  border:none;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .column{
@@ -62,7 +63,7 @@ li {
   padding: .4em .4em .4em .8em;
   margin: .5em 0 .5em 0;
   background: #f5f1fa;
-  font-family: 'Fredoka One', cursive;
+  font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
 
 }
@@ -71,22 +72,23 @@ li:hover{
   background: #e4dcee;
 }
 p{
-  color:#575756;
-  text-shadow: grey 1px 1px;
+  color:#333333;
+  text-shadow: rgb(207, 202, 202) 1px 1px;
   font-weight:bold;
   
 }
 h2{
-  color: #120c1b;
-  font-size: 30px;
-  font-family: 'Fredoka One', cursive;
+  margin-top: 30px;
+  color: #307554;
+  font-size: 28px;
+  font-family: 'Montserrat', sans-serif;
   text-transform: uppercase;
 }
 h1{
-  color:#200c41;
+  color: #d15656;
   font-size: 50px;
-  font-family: 'Fredoka One', cursive;
-  font-weight: lighter;
+  font-family: 'Montserrat', sans-serif;
+  
 }
 
 button{
@@ -96,3 +98,35 @@ button{
   margin-top: 15px;
 }
 
+.searchicon{
+  color: #d36464;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+.searchicon:hover{
+color: #cf4a4a;
+}
+.btnicon{
+
+  background: transparent;
+  border: none;
+}
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+svg{
+  margin-left:10px;
+}
+
+.green{
+  color: rgb(75, 104, 75);
+}
+
+.link{
+  color:#bd509c;
+  text-decoration: none;
+}

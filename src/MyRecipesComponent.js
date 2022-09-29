@@ -1,6 +1,6 @@
 import './App.css';
 
-function MyRecipesComponent({label, image, calories, ingredients}){
+function MyRecipesComponent({label, image, calories, ingredients, mealType, url}){
     return(
         <div>
             <h2>{label}</h2>
@@ -10,6 +10,8 @@ function MyRecipesComponent({label, image, calories, ingredients}){
                 <li> {element}</li>
             ))}
             </ul>
+            <p className='green'>Meal type: {mealType} </p>
+            <p className='red'>Preparation: <a  className='link' href={url}>here </a> </p>
         </div>
     )
 }
