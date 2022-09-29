@@ -63,6 +63,7 @@ li {
   display: block;
   padding: .4em .4em .4em .8em;
   margin: .5em 0 .5em 0;
+  border-radius:12px;
   background: #f5f1fa;
   font-family: 'Montserrat', sans-serif;
   font-weight: lighter;
