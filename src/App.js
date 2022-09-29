@@ -51,7 +51,7 @@ return(
   <div className='container'>
   <form onSubmit={finalSearch}>
     <input className='search' placeholder='Search by ingredients...' onChange={myRecipeSearch} value={mySearch}>
-       <img className="icon"  width="20px" src={icon}  alt="cook"/>
+       
     </input>
   </form>
   </div>
