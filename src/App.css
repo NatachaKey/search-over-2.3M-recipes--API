@@ -50,7 +50,6 @@ video {
   height:400px;
   border: #fff double 15px;
   border-radius: 50%;
-  margin:20px;
 }
 
 ul {
@@ -139,4 +138,10 @@ svg{
  border: 1px solid #212121; 
   font-size: 15px;
  }
+  
+.foto{
+  width:300px;
+  height:300px;
+  margin:10px;
+}
 }
