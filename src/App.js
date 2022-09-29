@@ -56,7 +56,7 @@ return(
   </div>
 
 <div className='container' >
-  <button>
+  <button onClick={()=>finalSearch }>
     <img className="icon"  width="40px" src={icon}  alt="cook"/>
   </button>
 </div>
