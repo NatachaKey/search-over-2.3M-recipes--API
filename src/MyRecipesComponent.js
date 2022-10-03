@@ -4,7 +4,7 @@ function MyRecipesComponent({label, cuisineType, image, calories, ingredients, m
     return(
         <div>
             <h2>{label}</h2>
-            <p className="grey"> {cuisineType} cisine </p>
+            <p className="grey"> {cuisineType} cuisine </p>
             <img className="foto" src={image} alt="dish" />
             <p>{calories.toFixed()} kcal</p>
             <ul>{ingredients.map(element =>(
