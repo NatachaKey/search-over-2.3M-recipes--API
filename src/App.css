@@ -128,7 +128,8 @@ svg{
   color: rgb(75, 104, 75);
 }
 .grey{
-color:grey;
+  color:grey;
+  text-transform:capitalize;
 }
 
 .link{
