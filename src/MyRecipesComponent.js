@@ -1,6 +1,6 @@
 import './App.css';
 
-function MyRecipesComponent({label, image, calories, ingredients, mealType, url, cuisineType}){
+function MyRecipesComponent({label, cuisineType, image, calories, ingredients, mealType, url}){
     return(
         <div>
             <h2>{label}</h2>
