@@ -127,6 +127,9 @@ svg{
 .green{
   color: rgb(75, 104, 75);
 }
+.grey{
+color:grey;
+}
 
 .link{
   color:#bd509c;
