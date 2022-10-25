@@ -56,13 +56,12 @@ return(
 <div className='column'>
 {myRecipes.map(element => (
   <MyRecipesComponent label={element.recipe.label}
-cuisineType = {element.recipe.cuisineType[0]}
-   image={element.recipe.image} 
-  calories= {element.recipe.calories} 
-  ingredients={element.recipe.ingredientLines} 
-
-  mealType={element.recipe.mealType[0]}
-  url={element.recipe.url}/>
+    cuisineType = {element.recipe.cuisineType[0]}
+    image={element.recipe.image} 
+    calories= {element.recipe.calories} 
+    ingredients={element.recipe.ingredientLines} 
+    mealType={element.recipe.mealType[0]}
+    url={element.recipe.url}/>
 ))}
 </div>
 </div>
