@@ -54,7 +54,7 @@ return(
 </form>
 
 <div className='column'>
-  {wordSubmitted !== myRecipes ? console.log("didnt find") : console.log("foud it")}  
+  { myRecipes.length>1 ? myRecipes : <p>foud it</p>}  
   
 {myRecipes.map((element, index) => (
   <MyRecipesComponent key={index}
