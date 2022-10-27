@@ -121,6 +121,9 @@ video {
      display:none;
 }
  
+.show{
+     display:block;
+}
 @media all and (max-width:500px){
      .search{
          border: 1px solid #212121;
