@@ -55,10 +55,8 @@ return(
 
 <div className='column'>
  
-
 { myRecipes.length <0 ? <p> Cannot find it </p>} :
-
-  
+ 
 {myRecipes.map((element, index) => (
   <MyRecipesComponent key={index}
     label={element.recipe.label}
