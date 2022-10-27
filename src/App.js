@@ -55,7 +55,7 @@ return(
 
 <div className='column'>
  
-  { wordSubmitted !== myRecipes ? <p>cannot find  it </p>  : myRecipes }  
+ 
   
 {myRecipes.map((element, index) => (
   <MyRecipesComponent key={index}
@@ -67,6 +67,9 @@ return(
     mealType={element.recipe.mealType[0]}
     url={element.recipe.url}/>
 ))}
+
+ { wordSubmitted !== myRecipes ? <p>cannot find  it </p>  : myRecipes }  
+
 </div>
 </div>
 
