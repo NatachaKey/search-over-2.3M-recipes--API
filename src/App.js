@@ -54,7 +54,7 @@ return(
 </form>
 
 <div className='column'>
-  { myRecipes.length>1 ? myRecipes : <p>foud it</p>}  
+  { myRecipes.length<1 ? <p>foud it</p>  : myRecipes }  
   
 {myRecipes.map((element, index) => (
   <MyRecipesComponent key={index}
