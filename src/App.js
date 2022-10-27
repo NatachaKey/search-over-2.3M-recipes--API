@@ -54,8 +54,11 @@ return(
 </form>
 
 <div className='column'>
-{myRecipes.map(element => (
-  <MyRecipesComponent label={element.recipe.label}
+  {wordSubmitted !== myRecipes ? <p> Cannot find the recipe </p> : myRecipes}  
+  
+{myRecipes.map((element, index) => (
+  <MyRecipesComponent key={index}
+    label={element.recipe.label}
     cuisineType = {element.recipe.cuisineType[0]}
     image={element.recipe.image} 
     calories= {element.recipe.calories} 
