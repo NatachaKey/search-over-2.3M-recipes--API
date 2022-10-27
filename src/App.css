@@ -116,7 +116,12 @@ video {
      color:#bd509c;
      text-decoration: none;
 }
- @media all and (max-width:500px){
+
+.hide{
+     display:none;
+}
+ 
+@media all and (max-width:500px){
      .search{
          border: 1px solid #212121;
          font-size: 15px;
