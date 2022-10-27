@@ -25,7 +25,6 @@ setMyRecipes(data.hits);
 
 
 const myRecipeSearch = (e)=>{
-  e.preventDefault();
   setMySearch(e.target.value)
 }
 
