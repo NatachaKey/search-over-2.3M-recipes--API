@@ -65,6 +65,7 @@ video {
      color:#333333;
      text-shadow: rgb(207, 202, 202) 1px 1px;
      font-weight:bold;
+     text-transform: capitalize;
 }
  h2{
      margin-top: 30px;
