@@ -52,10 +52,15 @@ const finalSearch =(e) =>{
 
 }
 
+onFormSubmit (e){
+e.preventDefault();
+}
+    
 return(
 
 <div className="App">
-
+<form onSubmit={onFormSubmit}>
+    
   <div className="container">
     <video autoPlay muted loop>
       <source src={video} type="video/mp4" />
@@ -94,6 +99,9 @@ else{
 }
 
 </div>
+
+
+</form>
 </div>
 
 )
