@@ -30,6 +30,9 @@ const myRecipeSearch = (e)=>{
 
 const finalSearch =(e) =>{
   e.preventDefault();
+    
+  window.location.reload(false); 
+    
   setWordSubmitted(mySearch);
 
 }
