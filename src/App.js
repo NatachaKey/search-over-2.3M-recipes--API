@@ -4,6 +4,9 @@ import video from './food.mp4';
 import MyRecipesComponent from './MyRecipesComponent';
 
 function App(){
+    
+noreload();
+    
 const MY_ID = "a5da9b9b";
 const MY_KEY = "5947a42bac5841c23f52078d7d7b1f01";
 
@@ -17,6 +20,9 @@ const [reloadPage, setReloadPage]=useState(true);
 const noreload = ()=> {
     setReloadPage(false);  
 }
+
+noreload();
+
 
 useEffect(() => {
     const getRecipe= async()=>{
