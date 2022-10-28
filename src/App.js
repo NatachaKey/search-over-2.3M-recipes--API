@@ -13,15 +13,24 @@ const[mySearch,setMySearch]= useState("");
 const[myRecipes, setMyRecipes]= useState([]);
 const [wordSubmitted, setWordSubmitted]=useState("cheese")
 
-const [reloadPage, setReloadPage]=useState(true);
 
+
+
+
+
+
+
+const [reloadPage, setReloadPage]=useState(true);
 const noreload = ()=> {
     setReloadPage(false);  
 }
-
 noreload();
 
 
+    
+    
+    
+    
 useEffect(() => {
     window.location.reload(false);
     const getRecipe= async()=>{
