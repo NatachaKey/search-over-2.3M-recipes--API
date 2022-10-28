@@ -12,14 +12,18 @@ const[mySearch,setMySearch]= useState("");
 const[myRecipes, setMyRecipes]= useState([]);
 const [wordSubmitted, setWordSubmitted]=useState("cheese")
 
+const [reloadPage, setReloadPage]=useState(true);
+
+const noreload = ()=> {
+    setReloadPage(false);  
+}
 
 useEffect(() => {
     const getRecipe= async()=>{
     const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${wordSubmitted}&app_id=${MY_ID}&app_key=${MY_KEY}`); 
     const data= await response.json();
-setMyRecipes(data.hits);
-  } 
-  
+    setMyRecipes(data.hits);
+    } 
     getRecipe();
 }, [wordSubmitted])
 
@@ -30,9 +34,6 @@ const myRecipeSearch = (e)=>{
 
 const finalSearch =(e) =>{
   e.preventDefault();
-    
-  window.location.reload(false); 
-    
   setWordSubmitted(mySearch);
 
 }
