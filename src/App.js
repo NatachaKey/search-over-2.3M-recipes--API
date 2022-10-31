@@ -2,40 +2,38 @@ import './App.css';
 import { useEffect, useState } from "react";
 import video from './food.mp4';
 import MyRecipesComponent from './MyRecipesComponent';
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
 
 function App(){
-    
+
 const MY_ID = "a5da9b9b";
 const MY_KEY = "5947a42bac5841c23f52078d7d7b1f01";
-
 
 const[mySearch,setMySearch]= useState("");
 const[myRecipes, setMyRecipes]= useState([]);
 const [wordSubmitted, setWordSubmitted]=useState("cheese")
 
-
-
-
-
-
-
-
-const [reloadPage, setReloadPage]=useState(true);
-const noreload = ()=> {
-    setReloadPage(false);  
-}
-noreload();
-
-
-    
-    
-    
-    
 useEffect(() => {
-    window.location.reload(false);
+    
     const getRecipe= async()=>{
     const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${wordSubmitted}&app_id=${MY_ID}&app_key=${MY_KEY}`); 
     const data= await response.json();
+      if(data.count === 0){
+
+        const MySwal = withReactContent(Swal)
+
+        MySwal.fire({
+          title: <p>Sorry, no results found. Try another ingredients.</p>,
+          didOpen: () => {
+            MySwal.error()
+          },
+        }).then(() => {
+          return MySwal.fire(<p>You can also try the name of the dish.</p>)
+        })
+        setMySearch("");
+      }
+
     setMyRecipes(data.hits);
     } 
     getRecipe();
@@ -49,12 +47,9 @@ const myRecipeSearch = (e)=>{
 const finalSearch =(e) =>{
   e.preventDefault();
   setWordSubmitted(mySearch);
-
 }
 
-    
 return(
-
 <div className="App">
     
   <div className="container">
@@ -74,12 +69,7 @@ return(
 
 <div className='column'>
  
-if (myRecipes.length <0) {
- window.location.reload(false);
- <p> Cannot find it </p>
-} 
 
-else{
  
 {myRecipes.map((element, index) => (
   <MyRecipesComponent 
@@ -92,13 +82,11 @@ else{
     mealType={element.recipe.mealType[0]}
     url={element.recipe.url}/>
 ))}
-}
 
 </div>
 </div>
 
 )
 }
-
 
 export default App;
