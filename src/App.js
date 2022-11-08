@@ -17,7 +17,7 @@ const [wordSubmitted, setWordSubmitted]=useState("cheese")
 useEffect(() => {
     
     const getRecipe= async()=>{
-    const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${wordSubmitted}&app_id=${MY_ID}&app_key=${MY_KEY}`); 
+    const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${wordSubmitted}&app_id=${MY_ID}&app_key=${MY_KEY}&random=true`); 
     const data= await response.json();
       if(data.count === 0){
 
