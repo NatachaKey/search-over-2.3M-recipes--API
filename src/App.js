@@ -9,6 +9,7 @@ function App(){
 
 const MY_ID = "a5da9b9b";
 const MY_KEY = "5947a42bac5841c23f52078d7d7b1f01";
+const random= true;
 
 const[mySearch,setMySearch]= useState("");
 const[myRecipes, setMyRecipes]= useState([]);
@@ -17,7 +18,7 @@ const [wordSubmitted, setWordSubmitted]=useState("cheese")
 useEffect(() => {
     
     const getRecipe= async()=>{
-    const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${wordSubmitted}&app_id=${MY_ID}&app_key=${MY_KEY}&random=true`); 
+    const response = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${wordSubmitted}&app_id=${MY_ID}&app_key=${MY_KEY}&random=${random}`); 
     const data= await response.json();
       if(data.count === 0){
 
