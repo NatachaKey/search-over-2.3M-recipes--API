@@ -13,7 +13,7 @@ const random= true;
 
 const[mySearch,setMySearch]= useState("");
 const[myRecipes, setMyRecipes]= useState([]);
-const [wordSubmitted, setWordSubmitted]=useState("cheese")
+const [wordSubmitted, setWordSubmitted]=useState("")
 
 useEffect(() => {
     
